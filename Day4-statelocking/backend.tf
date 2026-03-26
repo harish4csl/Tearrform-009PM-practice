@@ -5,3 +5,4 @@ terraform {
     region = "ap-south-1"
     use_lockfile = true   #this features suports only  terraform version 1.10 and above only
 }
+}
