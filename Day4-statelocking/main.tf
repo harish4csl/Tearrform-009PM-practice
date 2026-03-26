@@ -1,6 +1,3 @@
-provider "aws" {
-
-}
 resource "aws_instance" "dev" {
 
   ami = "ami-0f559c3642608c138"
