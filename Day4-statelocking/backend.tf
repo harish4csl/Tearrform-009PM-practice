@@ -3,6 +3,8 @@ terraform {
     bucket = "remotebackendtestng"
     key    = "Day-4/terraform.tfstate"
     region = "ap-south-1"
-    use_lockfile = true   #this features suports only  terraform version 1.10 and above only
+    #use_lockfile = true   #this features suports only  terraform version 1.10 and above only
+    dynamodb_table = "harishit"
+    encrypt = true
 }
 }
