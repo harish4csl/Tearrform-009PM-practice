@@ -3,7 +3,7 @@ resource "aws_instance" "dev" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "dev1-modifiedtest"
+    Name = "dev1-modifiedtest-new"
   }
 }
 
