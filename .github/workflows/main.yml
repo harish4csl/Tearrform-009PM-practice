@@ -34,7 +34,3 @@ jobs:
       - name: Terraform Plan
         working-directory: Day2-sample-base-code
         run: terraform plan
-
-      - name: Terraform Apply
-        working-directory: Day2-sample-base-code
-        run: terraform apply -auto-approve
