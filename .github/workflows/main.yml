@@ -34,3 +34,7 @@ jobs:
       - name: Terraform Plan
         working-directory: Day2-sample-base-code
         run: terraform plan
+
+      - name: Terraform destroy
+        working-directory: Day2-sample-base-code
+        run: terraform destroy -auto -approve
