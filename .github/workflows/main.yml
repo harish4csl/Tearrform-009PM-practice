@@ -1,0 +1,35 @@
+name: Terraform CI
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Code
+        uses: actions/checkout@v4
+        with:
+          repository: harish4csl/Tearrform-009PM-practice
+          ref: main
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.12.2   # change if needed
+
+      - name: Terraform Init
+        working-directory: Day2-sample-base-code
+        run: terraform init
+
+      - name: Terraform Plan
+        working-directory: Day2-sample-base-code
+        run: terraform plan
+
+      - name: Terraform Apply
+        working-directory: Day2-sample-base-code
+        run: terraform apply -auto-approve
